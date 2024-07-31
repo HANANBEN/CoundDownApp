@@ -1,0 +1,23 @@
+<h1>
+<!--
+To fix this issue, you need to use Angular's property binding syntax,
+1.Without square brackets, progress="50" treats 50 as a string.
+2.With square brackets, [progress]="50" treats 50 as a number.
+
+-->
+  <app-progress-bar [progress]="counterProgress"></app-progress-bar>
+<app-countdown #countdown
+[init]="totalCountdown"
+(onDecrease)="updateProgress($event)"
+(onComplete)="countDownFinished()"></app-countdown>
+<div class="initInput ">
+<label for="totalCountdown">Init on :</label>
+<input id="totalCountdown" type="text" [(ngModel)]="totalCountdown" >
+</div>
+
+<button (click)="countdown.startCountdown()  ;
+
+counterProgress=0;
+
+">Restart</button>
+</h1>

@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  background-color:rgb(8, 5, 5);
+  height: 50px;
+  border-radius: 40px;
+  margin :8px;
+  border: 1px solid;
+  border-color: red;
+
+  div{
+height : 100% ;
+border-radius: 40px;
+
+    background-color: red;
+  }
+
+}
+
+
+/*
+he :host pseudo-class specifically targets the host element of the Angular component,
+not the internal elements like <div>, <p>, <span>, <button>, etc., inside the component's
+template. However, styling the host element can indirectly affect the internal elements,
+primarily through layout changes, margins, padding, and borders applied to the host element.
+*/
